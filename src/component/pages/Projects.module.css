@@ -1,0 +1,561 @@
+/* =================================
+   PROJECTS PAGE
+================================= */
+
+.projectsPage {
+  min-height: 100vh;
+  padding: 70px 5% 90px;
+  background: #f7f9fc;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+.projectsHeader {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.projectsTag {
+  display: inline-block;
+  padding: 7px 15px;
+  margin-bottom: 15px;
+
+  background: #eaf2ff;
+  color: #2563eb;
+
+  border-radius: 30px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.projectsHeader h1 {
+  margin: 0 0 15px;
+
+  color: #172033;
+
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.1;
+
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.projectsHeader h1 span {
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.projectsHeader p {
+  max-width: 680px;
+  margin: auto;
+
+  color: #64748b;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =================================
+   PROJECT SLIDER
+================================= */
+
+.projectSlider {
+  position: relative;
+
+  width: 100%;
+  max-width: 1200px;
+
+  height: 430px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: #111827;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+}
+
+/* =================================
+   PROJECT IMAGE
+================================= */
+
+.projectImage {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 1;
+
+  animation: imageFade 0.6s ease;
+}
+
+@keyframes imageFade {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =================================
+   DARK OVERLAY
+================================= */
+
+.projectOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  background: linear-gradient(
+    90deg,
+    rgba(3, 10, 25, 0.96) 0%,
+    rgba(3, 10, 25, 0.82) 40%,
+    rgba(3, 10, 25, 0.38) 70%,
+    rgba(3, 10, 25, 0.12) 100%
+  );
+}
+
+/* =================================
+   CONTENT
+================================= */
+
+.projectContent {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 6%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  max-width: 650px;
+
+  color: white;
+}
+
+.projectCategory {
+  display: inline-block;
+
+  padding: 7px 13px;
+  margin-bottom: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(8px);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+}
+
+.projectContent h2 {
+  margin: 0 0 13px;
+
+  color: white;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+.projectDescription {
+  max-width: 600px;
+
+  margin: 0 0 18px;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* =================================
+   TECHNOLOGIES
+================================= */
+
+.techList {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+}
+
+.techList span {
+  padding: 6px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  backdrop-filter: blur(6px);
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+.projectButtons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.githubButton,
+.demoButton {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 17px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.githubButton {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  backdrop-filter: blur(8px);
+}
+
+.githubButton:hover {
+  background: white;
+
+  color: #172033;
+
+  transform: translateY(-2px);
+}
+
+.demoButton {
+  border: 1px solid white;
+
+  background: white;
+
+  color: #172033;
+}
+
+.demoButton:hover {
+  background: #2563eb;
+
+  border-color: #2563eb;
+
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+/* =================================
+   SLIDER CONTROLS
+================================= */
+
+.sliderBottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.slideNumber {
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.dots {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.dots button {
+  width: 22px;
+  height: 4px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.dots button:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.dots .activeDot {
+  width: 50px;
+
+  background: white;
+}
+
+/* =================================
+   PROJECT INFO
+================================= */
+
+.projectInfo {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 25px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.projectInfo div {
+  padding: 20px;
+
+  background: white;
+
+  border: 1px solid #e3e9f2;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+.projectInfo div:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
+}
+
+.projectInfo strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #2563eb;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+.projectInfo span {
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+  .projectsPage {
+    padding: 60px 5% 75px;
+  }
+
+  .projectSlider {
+    height: 410px;
+  }
+
+  .projectContent {
+    max-width: 570px;
+  }
+
+  .projectInfo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+  .projectsPage {
+    padding: 50px 18px 65px;
+  }
+
+  .projectsHeader {
+    margin-bottom: 30px;
+  }
+
+  .projectsHeader h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .projectsHeader p {
+    font-size: 14px;
+  }
+
+  .projectSlider {
+    height: 470px;
+
+    border-radius: 21px;
+  }
+
+  .projectOverlay {
+    background: linear-gradient(
+      180deg,
+      rgba(3, 10, 25, 0.12) 0%,
+      rgba(3, 10, 25, 0.95) 100%
+    );
+  }
+
+  .projectContent {
+    left: 22px;
+    right: 22px;
+
+    top: auto;
+    bottom: 22px;
+
+    transform: none;
+
+    max-width: none;
+  }
+
+  .projectContent h2 {
+    font-size: 30px;
+  }
+
+  .projectDescription {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .techList {
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+
+  .techList span {
+    padding: 5px 9px;
+    font-size: 10px;
+  }
+
+  .projectButtons {
+    margin-bottom: 17px;
+  }
+
+  .githubButton,
+  .demoButton {
+    padding: 9px 14px;
+    font-size: 12px;
+  }
+
+  .projectInfo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .projectInfo div {
+    padding: 17px 10px;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 400px) {
+  .projectSlider {
+    height: 490px;
+  }
+
+  .projectContent {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .projectContent h2 {
+    font-size: 27px;
+  }
+
+  .projectDescription {
+    font-size: 13px;
+  }
+
+  .projectInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .dots button {
+    width: 18px;
+  }
+
+  .dots .activeDot {
+    width: 40px;
+  }
+}
